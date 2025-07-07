@@ -1,0 +1,122 @@
+<mat-card style="margin: 0 auto 10px; width: 900px">
+  <h3>Tareas pendientes</h3>
+  <ul>
+    <li><i>* Pendiente: Añadir bootstrap, prime-ng, actualizar angular a last-version</i></li>
+    <li><i>* Pendiente: Terminar la tabla de todos los Raw Materials</i></li>
+    <li><i>* Pendiente: Añadir enlace a la página de los manufacturados o inyectarla</i></li>
+    <li><i>* Pendiente: Añadir farmeo de datos</i></li>
+    <li><i>* Pendiente: Añadir apartado de portanaves</i></li>
+  </ul>
+</mat-card>
+<mat-card style="margin: 0 auto 10px; width: 900px">
+  <h3>Páginas Relevantes</h3>
+  <ul>
+    <li><a href="https://inara.cz/elite/news" target="_blank">Inara</a>: General</li>
+      <li><a href="https://edgalaxy.net/hge" target="_blank">EDGalaxy HGE</a>: Farmeo de Manufacturados</li>
+      <li><a href="https://www.spansh.co.uk/plotter" target="_blank">Neutron Router</a>: Calculo de rutas</li>
+</ul>
+</mat-card>
+{{edgalaxyDataTable}}
+<mat-card style="margin: 0 auto 10px; width: 900px">
+  <h2 style="text-align: center">Manufactered materials</h2>
+  <p>
+    Buscar señales de alta calidad en los sistemas que cumplan estas
+    condiciones.
+  </p>https://www.spansh.co.uk/plotter
+  <p>Adjuntas enlace a diseño de nave optimo: [LINK PENDIENTE]</p>
+  <table border="1">
+    <th>Material Type</th>
+    <th>System Allegiance</th>
+    <th>Faction State</th>
+    <tr>
+      <td>Core Dynamic Composites</td>
+      <td>Federation</td>
+      <td>Election | None</td>
+    </tr>
+    <tr>
+      <td>Military Grade Alloys</td>
+      <td>Independent or Alliance</td>
+      <td>War | Civil War</td>
+    </tr>
+    <tr>
+      <td>Military Supercapacitators</td>
+      <td>Independent or Alliance</td>
+      <td>War | Civil War</td>
+    </tr>
+    <tr>
+      <td>Improvised Components</td>
+      <td>Independent or Alliance</td>
+      <td>Civil Unrest</td>
+    </tr>
+    <tr>
+      <td>Imperial Shielding</td>
+      <td>Imperial</td>
+      <td>Election | None</td>
+    </tr>
+    <tr>
+      <td>Farmaceutical Isolators</td>
+      <td>Independent or Alliance</td>
+      <td>OutBreak</td>
+    </tr>
+    <tr>
+      <td>Proto Heat Radiators</td>
+      <td>Independent or Alliance</td>
+      <td>Boom | None</td>
+    </tr>
+    <tr>
+      <td>Proto Radiolic Alloys</td>
+      <td>Independent or Alliance</td>
+      <td>Expansion | None</td>
+    </tr>
+  </table>
+</mat-card>
+
+<mat-card style="margin: 0 auto 10px; width: 900px">
+  <h2 style="text-align: center">Raw materials</h2>
+  <table border="1">
+    <th>Material</th>
+    <th>System</th>
+    <th>Body</th>
+    <th>Radious</th>
+    <th>X</th>
+    <th>Y</th>
+    <tr>
+      <td>Selenio</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Polonio</td>
+      <td>HIP 36601</td>
+      <td>C 1 a</td>
+      <td>762</td>
+      <td>36.9282</td>
+      <td>-75.2796</td>
+    </tr>
+  </table>
+</mat-card>
+
+<mat-card style="margin: 0 auto 10px; width: 900px">
+  <h2 style="text-align: center"> Codificated materials</h2>
+</mat-card>
+
+<mat-card class="demo-inline-calendar-card">
+  <!-- <p >1210 580 899</p>
+    <p>1077 158 547</p> -->
+  Valor más alto
+  <input [(ngModel)]="valor1" placeholder="Pon el valor máximo" />
+  Valor más bajo
+  <input [(ngModel)]="valor2" placeholder="Pon el valor mínimo" />
+  Diferencia: {{ valor1 - valor2 }}
+
+  <p>Nico: {{ textoDelNico }}</p>
+</mat-card>
+
+<mat-card class="demo-inline-calendar-card">
+  <mat-calendar [(selected)]="selected"></mat-calendar>
+</mat-card>
+
+<p>Selected date: {{ selected() }}</p>

@@ -1,0 +1,11 @@
+{
+    "/api/*": {
+      "target": "http://localhost:3000",
+      "secure": false
+    },
+    "/edgalaxy/hge": {
+      "target": "https://edgalaxy.net/hge",
+      "secure": false,
+      "pathRewrite": {"^/api-rewrite" : ""}
+    }
+  }
