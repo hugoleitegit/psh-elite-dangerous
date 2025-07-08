@@ -1,0 +1,1 @@
+import{Cc as e,Wa as i,Y as t}from"./chunk-NSTO75WG.js";var r=class o{static \u0275fac=function(m){return new(m||o)};static \u0275mod=i({type:o});static \u0275inj=t({imports:[e]})};export{r as FleetcarriersModule};
