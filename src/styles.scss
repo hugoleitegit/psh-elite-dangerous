@@ -13,3 +13,67 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-weight: normal;
     font-style: normal;
 }
+
+/* Custom styles for the application */
+p-card {
+    display: block;
+    h2 {
+        text-align: center;
+    }
+}
+.p-card.p-component {
+    padding: 10px;
+    color: #141414 ;
+    background-color:#6b6b6a6b;
+}
+
+
+.p-column-title {
+    display: none
+}
+
+@media screen and (max-width: 960px) {
+    .p-column-title {
+        display: inline;
+        font-weight: 600;
+    }
+}
+
+.tableTitle {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #3f3f3f;
+}
+
+span.highlight {
+    color: #3f3f3f;
+    //font-style: italic;
+    font-size: medium;
+    font-weight: 500;
+    text-decoration: underline;
+    
+}
+span.highlight:hover {
+    color: #00ff15;
+    //color: rgb(217, 93, 7); // Naranja Inara
+    text-shadow: #141414 1px 1px 1px;
+}
+
+a {
+    color: #3f3f3f;
+    font-style: italic;
+    font-size: medium;
+    text-decoration: underline;
+}
+a:hover {
+    color: #00ff15;
+    text-shadow: #141414 1px 1px 1px;
+    text-decoration: none;
+}
+p-menubar .p-menubar-item-link {
+    font-weight: 600;
+    :hover {
+        color: #00ff15;
+        text-shadow: #141414 1px 1px 1px;
+    }
+}

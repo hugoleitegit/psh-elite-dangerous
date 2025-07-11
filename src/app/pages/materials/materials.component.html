@@ -1,0 +1,134 @@
+<p-card class="w-75 mx-auto mb-3">
+  <h2>Manufacturados</h2>
+  <p>
+    Buscar <span class="highlight">TRANSMISIONES DE ALTA CALIDAD</span> en los
+    sistemas que cumplan estas condiciones.
+  </p>
+  <p>Ubicaciones en <a href="https://edgalaxy.net/hge">HGE</a></p>
+  <p-table
+    class="mb-3"
+    [value]="manufacturedMaterials"
+    responsiveLayout="stack"
+    [responsive]="true"
+  >
+    <ng-template #header>
+      <tr>
+        <th>Material Type</th>
+        <th>System Allegiance</th>
+        <th>Faction State</th>
+      </tr>
+    </ng-template>
+    <ng-template #body let-manufacturedMaterial>
+      <tr>
+        <td>
+          <span class="p-column-title">Manufacturado</span
+          >{{ manufacturedMaterial.name }}
+        </td>
+        <td>
+          <span class="p-column-title">Alianza del sistema</span
+          >{{ manufacturedMaterial.systemAllegiance }}
+        </td>
+        <td>
+          <span class="p-column-title">Estado de la facción</span
+          >{{ manufacturedMaterial.factionState }}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</p-card>
+
+<p-card class="w-75 mx-auto mb-3">
+  <h2>Elementos</h2>
+  <p>
+    Las materias primas en la actualización de la versión 4.0 están escasamente
+    pobladas y no se agrupan en fragmentos como en Horizons 3.8. Un CMDR aún
+    puede obtener estos materiales; sin embargo, los marcadores biológicos no
+    funcionan. Estas coordenadas planetarias específicas contienen una gran
+    cantidad de fragmentos cristalinos que liberan estas materias primas
+    específicas.
+  </p>
+
+  <p-table
+    class="mb-3"
+    [value]="rawMaterialsCommunity"
+    responsiveLayout="stack"
+    [responsive]="true"
+  >
+    <ng-template #caption>
+      <div class="flex items-center justify-between">
+        <span class="tableTitle">Localizaciones tras la colonización</span>
+      </div>
+    </ng-template>
+    <ng-template #header>
+      <tr>
+        <th>Elemento</th>
+        <th>Sistema</th>
+        <th>Cuerpo</th>
+        <th>Indicaciones</th>
+      </tr>
+    </ng-template>
+    <ng-template #body let-rawMaterial>
+      <tr *ngFor="let location of rawMaterial.locations; let last = last">
+        <td>
+          <span class="p-column-title">Elemento</span>{{ rawMaterial.name }}
+        </td>
+        <td><span class="p-column-title">Sistema</span>{{ location.system }}</td>
+        <td><span class="p-column-title">Cuerpo</span>{{ location.body }}</td>
+        <td>
+          <span class="p-column-title">Indicaciones</span>
+          <span *ngIf="location.indications">{{ location.indications }}</span>
+        </td>
+      </tr>
+    </ng-template> </p-table
+  ><p-table
+    class="mb-3"
+    [value]="rawMaterials"
+    responsiveLayout="stack"
+    [responsive]="true"
+  >
+    <ng-template #caption>
+      <div class="flex items-center justify-between">
+        <span class="tableTitle">Localizaciones antiguas ( <a href="https://edcodex.info/?m=tools&entry=431" target="_blank">EDISON</a> )</span>
+      </div>
+    </ng-template>
+    <ng-template #header>
+      <tr>
+        <th>Elemento</th>
+        <th>Sistema</th>
+        <th>Cuerpo</th>
+        <th>Radio</th>
+        <th>Latitud, Longitud</th>
+      </tr>
+    </ng-template>
+    <ng-template #body let-rawMaterial>
+      <tr *ngFor="let location of rawMaterial.locations; let last = last">
+        <td>
+          <span class="p-column-title">Elemento</span>{{ rawMaterial.name }}
+        </td>
+        <td><span class="p-column-title">Sistema</span>{{ location.system }}</td>
+        <td><span class="p-column-title">Cuerpo</span>{{ location.body }}</td>
+        <td>
+          <span class="p-column-title">Radio</span>{{ location.radious }}
+        </td>
+        <td>
+          <span class="p-column-title">Latitud, Longitud</span>
+          <span
+            *ngFor="let coordinate of location.coordinates; let last = last"
+          >
+            ({{ coordinate.lat }}, {{ coordinate.lng }})<span *ngIf="!last"
+              >,
+            </span>
+          </span>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</p-card>
+
+<p-card class="w-75 mx-auto mb-3">
+  <h2>Codificados</h2>
+  <div>
+    Cobra de Jameson estrellada en HIP 12099 1 B. Sondear planeta y buscar punto
+    de interés
+  </div>
+</p-card>

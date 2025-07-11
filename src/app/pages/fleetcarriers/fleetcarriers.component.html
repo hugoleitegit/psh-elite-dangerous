@@ -1,0 +1,21 @@
+<p-card class="w-75 mx-auto mb-3">
+  <h2>Portanaves</h2>
+  <p-table [value]="fleetCarriersCost" responsiveLayout="stack" [responsive]="true">
+    <ng-template #header>
+        <tr>
+            <th>Servicio / Módulo</th>
+            <th>Instalación</th>
+            <th>Mantenimiento Activo</th>
+            <th>Mantenimiento Suspendido</th>
+        </tr>
+    </ng-template>
+    <ng-template #body let-fleetCarriersCost>
+        <tr>
+            <td><span class="p-column-title">Servicio / Módulo</span>{{ fleetCarriersCost.name }}</td>
+            <td><span class="p-column-title">Instalación</span>{{ fleetCarriersCost.installation | number:'1.0-0'}}</td>
+            <td><span class="p-column-title">Mantenimiento Activo</span>{{ fleetCarriersCost.activeMaintenance | number:'1.0-0'}}</td>
+            <td><span class="p-column-title">Mantenimiento Suspendido</span>{{ fleetCarriersCost.suspendedMaintenance  | number:'1.0-0'}}</td>
+        </tr>
+    </ng-template>
+  </p-table>
+</p-card>

@@ -25,8 +25,26 @@ export class HomeComponent {
 
   edgalaxyDataTable: string = "";
 
+  url: string = 'https://edgalaxy.net/hge';
+  /**
+   * Control Panel password
+   * 244WjFcuX$
+   * 
+   * https://azure.microsoft.com/es-es/pricing/purchase-options/azure-account#free-services
+   * Azure Cosmos DB for MongoDB
+   * Azure DevOps
+   * 
+   * 
+   */
+
   constructor(private __edgalaxyService: EdgalaxyService) { 
-    this.getEdgalaxyData();
+    /* this.getEdgalaxyData(); */
+    fetch(this.url, {
+      method: 'GET',
+      mode: 'no-cors', // Necesario para solicitudes CORS
+    })
+      .then((data) => console.log(data))
+      .catch((error) => console.error('Error:', error));
    }
 
   getEdgalaxyData(): void {

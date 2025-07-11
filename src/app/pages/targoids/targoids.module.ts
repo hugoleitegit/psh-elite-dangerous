@@ -1,25 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
-import { HomeComponent } from './home.component';
-import { HomeRoutingModule } from './home-routing.module';
+import { TargoidsComponent } from './targoids.component';
+import { TargoidsRoutingModule } from './targoids-routing.module';
 
 import { CardModule } from 'primeng/card';
 
-
-
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [TargoidsComponent],
   imports: [
     CommonModule,
     FormsModule,
-    HomeRoutingModule,
-    MatCardModule, 
-    MatDatepickerModule,
+    TargoidsRoutingModule,
+    MatCardModule,
 
     CardModule
   ]
 })
-export class HomeModule { }
+export class TargoidsModule { }

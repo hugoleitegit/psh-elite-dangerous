@@ -1,6 +1,9 @@
 <app-header></app-header>
-<p>layout works!</p>
+<div class="card m-2">
+  <p-menubar [model]="items"> </p-menubar>
+</div>
+<!-- <p-breadcrumb class="max-w-full" [model]="items" [home]="home" /> -->
 <router-outlet></router-outlet>
 <footer>
-    <app-footer></app-footer>
+  <app-footer></app-footer>
 </footer>
